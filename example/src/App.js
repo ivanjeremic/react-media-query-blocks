@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
-
-import ExampleComponent from 'react-media-query-blocks'
+import React, { Component } from "react";
+import { Desktop } from "react-media-query-blocks";
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <Desktop>
+          <h1>This is the Desktop UgdfI</h1>
+        </Desktop>
       </div>
-    )
+    );
   }
 }
