@@ -8,7 +8,7 @@
 
 ```bash
 npm install react-media-query-blocks
-
+or
 yarn add react-media-query-blocks
 ```
 
@@ -18,7 +18,7 @@ yarn add react-media-query-blocks
 
 ```jsx
 import React from 'react'
-import MyComponent from 'react-media-query-blocks'
+import { Desktop, Mobile, Tablet } from 'react-media-query-blocks'
 
 function App() {
     return (
@@ -38,6 +38,8 @@ function App() {
     )
 }
 ```
+
+## API
 
 ## License
 
