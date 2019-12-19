@@ -10,17 +10,17 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <PhoneOnly isVisibleTo={900}>
-          <h1>PhoneOnly</h1>
+        <PhoneOnly>
+          <h1 style={{ fontSize: "4em" }}>PhoneOnly !</h1>
         </PhoneOnly>
         <TabletPortaitOnly>
-          <h1>This is TabletPortaitOnly !</h1>
+          <h1 style={{ fontSize: "4em" }}>TabletPortaitOnly !</h1>
         </TabletPortaitOnly>
         <TabletLandscapeOnly>
-          <h1>This is TabletLandscapeOnly !</h1>
+          <h1 style={{ fontSize: "4em" }}>TabletLandscapeOnly !</h1>
         </TabletLandscapeOnly>
         <DesktopOnly>
-          <h1>This is DesktopOnly !</h1>
+          <h1 style={{ fontSize: "4em" }}>DesktopOnly !</h1>
         </DesktopOnly>
       </div>
     );
