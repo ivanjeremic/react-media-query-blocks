@@ -1,14 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function TabletPortaitOnly({ children }) {
-  const [state, setState] = React.useState("");
+export default function TabletPortaitOnly({
+  children,
+  isVisibleTo,
+  isVisibleFrom
+}) {
+  const [isVisibleToState] = React.useState(isVisibleTo);
+  const [isVisibleFromState] = React.useState(isVisibleFrom);
 
   const TabletPortaitOnly = styled.div`
-    @media (min-width: 899px) {
+    @media (min-width: ${isVisibleToState ? isVisibleToState : 899}px) {
       display: none;
     }
-    @media (max-width: 599px) {
+    @media (max-width: ${isVisibleFromState ? isVisibleFromState : 599}px) {
       display: none;
     }
   `;

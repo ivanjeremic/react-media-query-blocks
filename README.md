@@ -46,13 +46,36 @@ function App() {
 
 ## API
 
-If no custom values are specified the default values will be used, (recommended) because I think the default settings are working very well & in most cases. If you need a custom size range where your components need to be visible feel free to use the props available to customize your component.
+If no custom breakpoints are specified the default breakpoints will be used, (recommended) because I think the default breakpoints are working very well in most cases. If you need a custom size range where your components need to be visible feel free to use the props available to customize your component.
 
-| Possible Imports  | Custom size Props | How to use                      | A   | A   |
-| ----------------- | ----------------- | ------------------------------- | --- | --- |
-| PhoneOnly         | VisibleUpTo       | `<PhoneOnly VisibleUpTo={900}>` | D   | D   |
-| TabletPortaitOnly | D                 | D                               | D   | D   |
-| DesktopOnly       | D                 | D                               | D   | D   |
+| Possible Imports  | Custom size Props          | Default | Default |
+| ----------------- | -------------------------- | ------- | ------- |
+| PhoneOnly         | isVisibleFrom              | 0       | 599     |
+| TabletPortaitOnly | isVisibleFrom, VisibleUpTo | 600     | 899     |
+| DesktopOnly       | isVisibleFrom, VisibleUpTo | 1200    | 1799    |
+
+-
+Example with custom breakpoints below. You can also use the same component multiple times with different breakpoints, below you can see 2 PhoneOnly components one with default breakpoints the other one with custom breakpoints.
+
+```jsx
+{/* PhoneOnly */}
+        <PhoneOnly isVisibleFrom={900}>
+          <OnlyVisibleOnPhone />
+        <PhoneOnly/>
+        <PhoneOnly>
+          <OnlyVisibleOnPhone />
+        <PhoneOnly/>
+{/* PhoneOnly */}
+
+        <TabletPortaitOnly>
+          <OnlyVisibleOnTablet />
+        <TabletPortaitOnly/>
+
+        <DesktopOnly>
+          <OnlyVisibleOnDesktop />
+        <DesktopOnly/>
+
+```
 
 ## License
 

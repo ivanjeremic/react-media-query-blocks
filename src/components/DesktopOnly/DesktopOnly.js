@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function DesktopOnly({ children }) {
-  const [state, setState] = React.useState("");
+export default function DesktopOnly({ children, isVisibleTo, isVisibleFrom }) {
+  const [isVisibleToState] = React.useState(isVisibleTo);
+  const [isVisibleFromState] = React.useState(isVisibleFrom);
 
   const DesktopOnly = styled.div`
-    @media (min-width: 1799px) {
+    @media (min-width: ${isVisibleToState ? isVisibleToState : 4799}px) {
       display: none;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: ${isVisibleFromState ? isVisibleFromState : 1200}px) {
       display: none;
     }
   `;
