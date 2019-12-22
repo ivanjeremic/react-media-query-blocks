@@ -6,7 +6,7 @@ export default function DesktopOnly({ children, isVisibleTo, isVisibleFrom }) {
   const [isVisibleFromState] = React.useState(isVisibleFrom);
 
   const DesktopOnly = styled.div`
-    @media (min-width: ${isVisibleToState ? isVisibleToState : 4799}px) {
+    @media (min-width: ${isVisibleToState ? isVisibleToState : 1800}px) {
       display: none;
     }
     @media (max-width: ${isVisibleFromState ? isVisibleFromState : 1200}px) {

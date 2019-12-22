@@ -10,7 +10,7 @@ export default function TabletLandscapeOnly({
   const [isVisibleFromState] = React.useState(isVisibleFrom);
 
   const TabletLandscapeOnly = styled.div`
-    @media (min-width: ${isVisibleToState ? isVisibleToState : 1199}px) {
+    @media (min-width: ${isVisibleToState ? isVisibleToState : 1200}px) {
       display: none;
     }
     @media (max-width: ${isVisibleFromState ? isVisibleFromState : 900}px) {

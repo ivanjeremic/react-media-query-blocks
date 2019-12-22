@@ -50,16 +50,16 @@ If no custom breakpoints are specified the default breakpoints will be used, (re
 
 | Possible Imports  | Custom size Props          | Default | Default |
 | ----------------- | -------------------------- | ------- | ------- |
-| PhoneOnly         | isVisibleFrom              | 0       | 599     |
-| TabletPortaitOnly | isVisibleFrom, VisibleUpTo | 600     | 899     |
-| DesktopOnly       | isVisibleFrom, VisibleUpTo | 1200    | 1799    |
+| PhoneOnly         | isVisibleTo                | 0       | 600     |
+| TabletPortaitOnly | isVisibleFrom, VisibleUpTo | 600     | 900     |
+| DesktopOnly       | isVisibleFrom, VisibleUpTo | 1200    | 1800    |
 
 -
 Example with custom breakpoints below. You can also use the same component multiple times with different breakpoints, below you can see 2 PhoneOnly components one with default breakpoints the other one with custom breakpoints.
 
 ```jsx
 {/* PhoneOnly */}
-        <PhoneOnly isVisibleFrom={900}>
+        <PhoneOnly isVisibleTo={900}>
           <OnlyVisibleOnPhone />
         <PhoneOnly/>
         <PhoneOnly>

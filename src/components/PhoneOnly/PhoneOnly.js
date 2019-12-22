@@ -5,7 +5,7 @@ export default function PhoneOnly({ children, isVisibleTo }) {
   const [state] = React.useState(isVisibleTo);
 
   const PhoneOnly = styled.div`
-    @media (min-width: ${state ? state : 599}px) {
+    @media (min-width: ${state ? state : 600}px) {
       display: none;
     }
   `;
