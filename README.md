@@ -48,7 +48,7 @@ function App() {
 
 If no custom breakpoints are specified the default breakpoints will be used, (recommended) because I think the default breakpoints are working very well in most cases. If you need a custom size range where your components need to be visible feel free to use the props available to customize your component.
 
-| Possible Imports  | Custom size Props          | Default | Default |
+| Components        | Custom breakpoints         | Default | Default |
 | ----------------- | -------------------------- | ------- | ------- |
 | PhoneOnly         | isVisibleTo                | 0       | 600     |
 | TabletPortaitOnly | isVisibleFrom, VisibleUpTo | 600     | 900     |
