@@ -33,8 +33,12 @@ function App() {
         <PhoneOnly/>
 
         <TabletPortaitOnly>
-          <OnlyVisibleOnTablet />
+          <OnlyVisibleOnTabletPT />
         <TabletPortaitOnly/>
+
+        <TabletLandscapeOnly>
+          <OnlyVisibleOnTabletLS />
+        <TabletLandscapeOnly/>
 
         <DesktopOnly>
           <OnlyVisibleOnDesktop />
@@ -48,11 +52,12 @@ function App() {
 
 If no custom breakpoints are specified the default breakpoints will be used, (recommended) because I think the default breakpoints are working very well in most cases. If you need a custom size range where your components need to be visible feel free to use the props available to customize your component.
 
-| Components        | Custom breakpoints         | Default | Default |
-| ----------------- | -------------------------- | ------- | ------- |
-| PhoneOnly         | isVisibleTo                | 0       | 600     |
-| TabletPortaitOnly | isVisibleFrom, VisibleUpTo | 600     | 900     |
-| DesktopOnly       | isVisibleFrom, VisibleUpTo | 1200    | 1800    |
+| Components          | Custom breakpoints         | Default | Default |
+| ------------------- | -------------------------- | ------- | ------- |
+| PhoneOnly           | isVisibleTo                | 0       | 599     |
+| TabletPortaitOnly   | isVisibleFrom, VisibleUpTo | 600     | 899     |
+| TabletLandscapeOnly | isVisibleFrom, VisibleUpTo | 900     | 1199    |
+| DesktopOnly         | isVisibleFrom, VisibleUpTo | 1200    | 1799    |
 
 -
 Example with custom breakpoints below. You can also use the same component multiple times with different breakpoints, below you can see 2 PhoneOnly components one with default breakpoints the other one with custom breakpoints.

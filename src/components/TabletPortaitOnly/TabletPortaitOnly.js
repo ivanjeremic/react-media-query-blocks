@@ -10,10 +10,10 @@ export default function TabletPortaitOnly({
   const [isVisibleFromState] = React.useState(isVisibleFrom);
 
   const TabletPortaitOnly = styled.div`
-    @media (min-width: ${isVisibleToState ? isVisibleToState : 900}px) {
+    @media (min-width: ${isVisibleToState ? isVisibleToState + 1 : 900}px) {
       display: none;
     }
-    @media (max-width: ${isVisibleFromState ? isVisibleFromState : 600}px) {
+    @media (max-width: ${isVisibleFromState ? isVisibleFromState - 1 : 599}px) {
       display: none;
     }
   `;
