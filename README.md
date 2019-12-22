@@ -4,11 +4,11 @@
 
 [![NPM](https://img.shields.io/npm/v/react-media-query-blocks.svg)](https://www.npmjs.com/package/react-media-query-blocks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Install **_-INFO-_** **_Not ready for use until 22.12.2019_**
+## Install
 
 ```bash
 npm install react-media-query-blocks
-or
+ or
 yarn add react-media-query-blocks
 ```
 
