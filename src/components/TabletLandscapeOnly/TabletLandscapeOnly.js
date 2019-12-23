@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 export default function TabletLandscapeOnly({
   children,
-  isVisibleTo,
-  isVisibleFrom
+  visibleTo,
+  visibleFrom
 }) {
-  const [isVisibleToState] = React.useState(isVisibleTo);
-  const [isVisibleFromState] = React.useState(isVisibleFrom);
+  const [visibleToState] = React.useState(visibleTo);
+  const [visibleFromState] = React.useState(visibleFrom);
   /*
   'min-width' need to have in the code +1 to have on the screen the correct result,
   and 'max-width' -1. In the case of PhoneOnly we have in the code default 600px
@@ -16,10 +16,10 @@ export default function TabletLandscapeOnly({
   the expected result in the Browser is important.
   */
   const TabletLandscapeOnly = styled.div`
-    @media (min-width: ${isVisibleToState ? isVisibleToState + 1 : 1200}px) {
+    @media (min-width: ${visibleToState ? visibleToState + 1 : 1200}px) {
       display: none;
     }
-    @media (max-width: ${isVisibleFromState ? isVisibleFromState - 1 : 899}px) {
+    @media (max-width: ${visibleFromState ? visibleFromState - 1 : 899}px) {
       display: none;
     }
   `;

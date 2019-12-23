@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function DesktopOnly({ children, isVisibleTo, isVisibleFrom }) {
-  const [isVisibleToState] = React.useState(isVisibleTo);
-  const [isVisibleFromState] = React.useState(isVisibleFrom);
+export default function DesktopOnly({ children, visibleTo, visibleFrom }) {
+  const [visibleToState] = React.useState(visibleTo);
+  const [visibleFromState] = React.useState(visibleFrom);
   /*
   'min-width' need to have in the code +1 to have on the screen the correct result,
   and 'max-width' -1. In the case of PhoneOnly we have in the code default 600px
@@ -12,12 +12,10 @@ export default function DesktopOnly({ children, isVisibleTo, isVisibleFrom }) {
   the expected result in the Browser is important.
   */
   const DesktopOnly = styled.div`
-    @media (min-width: ${isVisibleToState ? isVisibleToState + 1 : 1800}px) {
+    @media (min-width: ${visibleToState ? visibleToState + 1 : 1800}px) {
       display: none;
     }
-    @media (max-width: ${isVisibleFromState
-        ? isVisibleFromState - 1
-        : 1199}px) {
+    @media (max-width: ${visibleFromState ? visibleFromState - 1 : 1199}px) {
       display: none;
     }
   `;

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function PhoneOnly({ children, isVisibleTo }) {
-  const [state] = React.useState(isVisibleTo);
+export default function PhoneOnly({ children, visibleTo }) {
+  const [state] = React.useState(visibleTo);
   /*
   'min-width' need to have in the code +1 to have on the screen the correct result,
   and 'max-width' -1. In the case of PhoneOnly we have in the code default 600px

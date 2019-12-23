@@ -3,17 +3,17 @@ import styled from "styled-components";
 
 export default function TabletPortaitOnly({
   children,
-  isVisibleTo,
-  isVisibleFrom
+  visibleTo,
+  visibleFrom
 }) {
-  const [isVisibleToState] = React.useState(isVisibleTo);
-  const [isVisibleFromState] = React.useState(isVisibleFrom);
+  const [visibleToState] = React.useState(visibleTo);
+  const [visibleFromState] = React.useState(visibleFrom);
 
   const TabletPortaitOnly = styled.div`
-    @media (min-width: ${isVisibleToState ? isVisibleToState + 1 : 900}px) {
+    @media (min-width: ${visibleToState ? visibleToState + 1 : 900}px) {
       display: none;
     }
-    @media (max-width: ${isVisibleFromState ? isVisibleFromState - 1 : 599}px) {
+    @media (max-width: ${visibleFromState ? visibleFromState - 1 : 599}px) {
       display: none;
     }
   `;
